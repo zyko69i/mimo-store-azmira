@@ -1,0 +1,36 @@
+{
+  "name": "mimo-store-azmira",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "MiMo Store Azmira — studio de revente multi-plateformes et vitrine en ligne",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.9.0",
+    "idb-keyval": "^6.3.0",
+    "lucide-react": "^1.82.0",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^3.11.2",
+    "wouter": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^18.3.32",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.7.0",
+    "postcss": "^8.5.34",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21"
+  }
+}

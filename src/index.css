@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body { @apply bg-creme text-encre font-sans antialiased; font-size: 15px; }
+  input, select, textarea { font-size: 16px; }
+  :focus-visible { outline: 2px solid #A8875A; outline-offset: 2px; }
+  ::selection { background: #E9DCC6; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+}
+@layer components {
+  .carte { @apply bg-papier rounded-lg border border-trait shadow-carte min-w-0; }
+  .btn { @apply inline-flex items-center justify-center gap-2 min-h-[44px] px-4 rounded-md text-sm font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-encre { @apply btn bg-encre text-creme hover:bg-[#33302a]; }
+  .btn-or { @apply btn bg-or text-white hover:bg-or-fonce; }
+  .btn-ligne { @apply btn border border-trait bg-papier text-encre hover:bg-white; }
+  .btn-doux { @apply btn bg-or-clair/60 text-encre hover:bg-or-clair; }
+  .btn-danger { @apply btn border border-terre/30 text-terre bg-papier hover:bg-terre-clair; }
+  .btn-sm { @apply min-h-[36px] px-3 text-[13px]; }
+  .champ { @apply w-full min-h-[44px] rounded-md border border-trait bg-white px-3 py-2 text-[15px] text-encre placeholder:text-gris/60 focus:border-or focus:outline-none focus:ring-2 focus:ring-or/20; }
+  .etiquette { @apply block text-[12px] font-semibold uppercase tracking-[0.06em] text-gris mb-1.5; }
+  .titre-page { @apply font-display text-[30px] leading-none tracking-tight; }
+  .surtitre { @apply text-[12px] font-semibold uppercase tracking-[0.12em] text-or-fonce; }
+  .pastille { @apply inline-flex items-center gap-1 rounded-sm px-2 py-0.5 text-[12px] font-semibold; }
+  .num { font-variant-numeric: tabular-nums; }
+}

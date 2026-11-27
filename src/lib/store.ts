@@ -61,7 +61,7 @@ export async function clearAll() { state = { items: [], sales: [], clients: [], 
 const photoCache = new Map<string, string>();
 export async function savePhoto(dataUrl: string) { const id = 'ph_' + Math.random().toString(36).slice(2, 12); await idbSet(id, dataUrl, photoStore); photoCache.set(id, dataUrl); return id; }
 export async function loadPhoto(id: string) {
-  if (id.startsWith('/')) return id; // photo de démonstration servie par le site
+  if (id.startsWith('/')) return '.' + id; // photo de démonstration servie par le site
   if (photoCache.has(id)) return photoCache.get(id)!;
   const v = (await idbGet(id, photoStore)) as string | undefined; if (v) photoCache.set(id, v); return v || '';
 }

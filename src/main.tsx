@@ -5,4 +5,4 @@ import { initStore } from './lib/store';
 
 initStore();
 createRoot(document.getElementById('root')!).render(<App />);
-if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('/sw.js').catch(() => {});
+if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('./sw.js').catch(() => {});
